@@ -1,5 +1,10 @@
 <tool id="uniqprimer" name="Uniqprimer" version="0.5.0">
 	<description>Design specific primers of sequences</description>
+	<requirements>
+		<requirement type="package" version="6.5.7">emboss</requirement>
+		<requirement type="package" version="3.23">mummer</requirement>
+		<requirement type="package" version="1.1.4">primer3</requirement>
+	</requirements>
 	<command>source $__tool_directory__/include.txt; $__tool_directory__/uniqprimer.sh $include $exclude $product_size_range $primer_size $min_size $max_size $crossvalidate $outfile $log $fasta
 #for $i in $inputs
         -i ${i.input}
